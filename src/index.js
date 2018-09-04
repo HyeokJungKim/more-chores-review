@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //index & show (R)
   fetch("http://localhost:3000/chores")
-  .then(res => res.json())
+  .then(res => {
+    return res.json()
+  })
   .then((json) => {
     json.forEach(renderChore)
   })
@@ -70,9 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // })
   }
   //Update Action (U)
-  () => {
-
-  }
   function editChore(event){
     console.log("hit");
     // event.preventDefault()
